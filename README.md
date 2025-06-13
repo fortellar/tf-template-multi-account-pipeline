@@ -26,7 +26,9 @@ To configure this template for your environment, you need to set up the followin
 1. By default the MAP pipeline uses the `OrganizationAccountAccessRole` role to access the accounts in your AWS Organization. If you want to use a different role, you can change this in the `multi-account-pipeline.sh` script.
 1. Reconfigure the docker image in `push.yml` and `terraform-apply.yml` to use your own image. If you opt to continue using our image you can clone [fortellar/docker-terraform](https://github.com/fortellar/docker-terraform) and build your own image with the necessary tools installed. Our image is subject to change and while we will try to keep it stable, we cannot guarantee that it will always work with your pipeline.
 
-# Use a [Mermaid](https://mermaid.js.org/) [plugin](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) to visualize this in your IDE
+# Diagram
+Use a [Mermaid](https://mermaid.js.org/) [plugin](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) to 
+visualize this in your IDE
 ```mermaid
 flowchart TD
     A[Push to main] --> B[Run pre-commit]
