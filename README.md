@@ -16,7 +16,7 @@ It's not intended for use in single-account environments or for applying configu
 ## What will it configure by default?
 1. OIDC authentication for GitHub Actions to assume a role in the target AWS account.
     1. OIDC Identity Provider in the target AWS account.
-    1. ODIC role in the target AWS account.
+    1. oidc role in the target AWS account.
 1. A secure IAM password policy and IAM account alias.
 
 # Configuring for your environment
@@ -103,7 +103,7 @@ flowchart TD
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_child_account_automation"></a> [child\_account\_automation](#input\_child\_account\_automation) | Enable child account automation | `bool` | `false` | no |
-| <a name="input_odic_subjects"></a> [odic\_subjects](#input\_odic\_subjects) | ODIC Additional Subjects | `list(string)` | `[]` | no |
+| <a name="input_oidc_subjects"></a> [oidc\_subjects](#input\_oidc\_subjects) | oidc Additional Subjects | `list(string)` | `[]` | no |
 | <a name="input_region"></a> [region](#input\_region) | AWS region to use | `string` | `"us-west-2"` | no |
 | <a name="input_target_account_id"></a> [target\_account\_id](#input\_target\_account\_id) | The AWS Account ID to target. | `string` | `""` | no |
 | <a name="input_target_account_name"></a> [target\_account\_name](#input\_target\_account\_name) | The AWS Account Name to target. | `string` | `""` | no |

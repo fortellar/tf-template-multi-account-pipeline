@@ -8,8 +8,8 @@ variable "account_name" {
   type        = string
 }
 
-variable "odic_subjects" {
-  description = "ODIC Additional Subjects"
+variable "oidc_subjects" {
+  description = "oidc Additional Subjects"
   type        = list(string)
   default     = []
 }

@@ -23,8 +23,8 @@ variable "child_account_automation" {
 }
 
 # Use a per account map lookup when referencing these
-variable "odic_subjects" {
-  description = "ODIC Additional Subjects"
+variable "oidc_subjects" {
+  description = "oidc Additional Subjects"
   type        = list(string)
   default     = []
 }

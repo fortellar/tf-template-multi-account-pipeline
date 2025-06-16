@@ -4,5 +4,5 @@ module "base_config" {
 
   account_id    = var.target_account_id
   account_name  = var.target_account_name
-  odic_subjects = var.odic_subjects
+  oidc_subjects = var.oidc_subjects
 }

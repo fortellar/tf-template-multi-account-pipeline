@@ -10,10 +10,10 @@ module "iam_github_oidc_role" {
   version = "~> 5.58"
 
   # This should be updated to suit your organization, repository, references/branches, etc.
-  name = "github-odic"
+  name = "github-oidc"
   subjects = distinct(concat(
     ["REPLACEME/tf-${var.account_name}-*"], # This will include tf-<account_name>-* by default for all GitHub repos for all branches. We will control deployments on the repos themselves.
-    var.odic_subjects
+    var.oidc_subjects
   ))
 
   policies = {

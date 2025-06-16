@@ -28,7 +28,7 @@ jobs:
       - name: AWS Authenticate (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: "arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github-odic"
+          role-to-assume: "arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github-oidc"
           aws-region: "${{ env.AWS_REGION }}"
 
       - name: Terraform Init

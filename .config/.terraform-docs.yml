@@ -21,7 +21,7 @@ content: |-
   ## What will it configure by default?
   1. OIDC authentication for GitHub Actions to assume a role in the target AWS account.
       1. OIDC Identity Provider in the target AWS account.
-      1. ODIC role in the target AWS account.
+      1. oidc role in the target AWS account.
   1. A secure IAM password policy and IAM account alias.
 
   # Configuring for your environment
