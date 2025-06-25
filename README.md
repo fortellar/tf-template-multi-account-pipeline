@@ -18,6 +18,7 @@ It's not intended for use in single-account environments or for applying configu
     1. OIDC Identity Provider in the target AWS account.
     1. oidc role in the target AWS account.
 1. A secure IAM password policy and IAM account alias.
+1. AWS Account Alternate contacts
 
 # Configuring for your environment
 To configure this template for your environment, you need to set up the following:
@@ -91,7 +92,7 @@ flowchart TD
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.10.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.99.1 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 6.0 |
 
 ## Resources
 
@@ -102,6 +103,7 @@ flowchart TD
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_alternate_contacts"></a> [alternate\_contacts](#input\_alternate\_contacts) | Alternate contacts for operations, billing, and security | <pre>object({<br/>    operations = object({<br/>      name          = string<br/>      title         = string<br/>      email_address = string<br/>      phone_number  = string<br/>    })<br/>    billing = object({<br/>      name          = string<br/>      title         = string<br/>      email_address = string<br/>      phone_number  = string<br/>    })<br/>    security = object({<br/>      name          = string<br/>      title         = string<br/>      email_address = string<br/>      phone_number  = string<br/>    })<br/>  })</pre> | n/a | yes |
 | <a name="input_child_account_automation"></a> [child\_account\_automation](#input\_child\_account\_automation) | Enable child account automation | `bool` | `false` | no |
 | <a name="input_oidc_subjects"></a> [oidc\_subjects](#input\_oidc\_subjects) | oidc Additional Subjects | `list(string)` | `[]` | no |
 | <a name="input_region"></a> [region](#input\_region) | AWS region to use | `string` | `"us-west-2"` | no |

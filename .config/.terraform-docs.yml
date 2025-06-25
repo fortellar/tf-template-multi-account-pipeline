@@ -23,6 +23,7 @@ content: |-
       1. OIDC Identity Provider in the target AWS account.
       1. oidc role in the target AWS account.
   1. A secure IAM password policy and IAM account alias.
+  1. AWS Account Alternate contacts
 
   # Configuring for your environment
   To configure this template for your environment, you need to set up the following:

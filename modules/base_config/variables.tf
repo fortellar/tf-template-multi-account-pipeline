@@ -13,3 +13,27 @@ variable "oidc_subjects" {
   type        = list(string)
   default     = []
 }
+
+variable "alternate_contacts" {
+  description = "Alternate contacts for operations, billing, and security"
+  type = object({
+    operations = object({
+      name          = string
+      title         = string
+      email_address = string
+      phone_number  = string
+    })
+    billing = object({
+      name          = string
+      title         = string
+      email_address = string
+      phone_number  = string
+    })
+    security = object({
+      name          = string
+      title         = string
+      email_address = string
+      phone_number  = string
+    })
+  })
+}
