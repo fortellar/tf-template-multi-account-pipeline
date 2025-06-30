@@ -105,6 +105,7 @@ flowchart TD
 |------|-------------|------|---------|:--------:|
 | <a name="input_alternate_contacts"></a> [alternate\_contacts](#input\_alternate\_contacts) | Alternate contacts for operations, billing, and security | <pre>object({<br/>    operations = object({<br/>      name          = string<br/>      title         = string<br/>      email_address = string<br/>      phone_number  = string<br/>    })<br/>    billing = object({<br/>      name          = string<br/>      title         = string<br/>      email_address = string<br/>      phone_number  = string<br/>    })<br/>    security = object({<br/>      name          = string<br/>      title         = string<br/>      email_address = string<br/>      phone_number  = string<br/>    })<br/>  })</pre> | n/a | yes |
 | <a name="input_child_account_automation"></a> [child\_account\_automation](#input\_child\_account\_automation) | Enable child account automation | `bool` | `false` | no |
+| <a name="input_enable_guardduty"></a> [enable\_guardduty](#input\_enable\_guardduty) | Enable GuardDuty - Will provision IAM roles | `bool` | n/a | yes |
 | <a name="input_oidc_subjects"></a> [oidc\_subjects](#input\_oidc\_subjects) | oidc Additional Subjects | `list(string)` | `[]` | no |
 | <a name="input_region"></a> [region](#input\_region) | AWS region to use | `string` | `"us-west-2"` | no |
 | <a name="input_target_account_id"></a> [target\_account\_id](#input\_target\_account\_id) | The AWS Account ID to target. | `string` | `""` | no |

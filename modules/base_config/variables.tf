@@ -37,3 +37,8 @@ variable "alternate_contacts" {
     })
   })
 }
+
+variable "enable_guardduty" {
+  description = "Enable GuardDuty - Will provision IAM roles"
+  type        = bool
+}

@@ -6,4 +6,5 @@ module "base_config" {
   account_name       = var.target_account_name
   oidc_subjects      = var.oidc_subjects
   alternate_contacts = var.alternate_contacts
+  enable_guardduty   = var.enable_guardduty
 }
