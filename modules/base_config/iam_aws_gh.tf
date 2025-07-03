@@ -17,6 +17,6 @@ module "iam_github_oidc_role" {
   ))
 
   policies = {
-    S3ReadOnly = "arn:aws:iam::aws:policy/AdministratorAccess"
+    AdministratorAccess = "arn:aws:iam::aws:policy/AdministratorAccess"
   }
 }
